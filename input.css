@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.bar {
+  background-color: rgba(0,255,0,0.5);
+}
+
+.key {
+  position: absolute;
+  width: 50px;
+  font-size: 50px;
+  color: #fff;
+  bottom: -50px;
+  transition: bottom 3s linear;
+}
+
+.success {
+  color: #00FF00;
+}
+
+.fail {
+  color: #FF0000;
+}
+
+.Q {
+  left: 17%;
+}
+
+.W {
+  left: 25%;
+}
+
+.O {
+  right: 25%;
+}
+
+.P {
+  right: 17%;
+}
+
+@media screen and (max-width: 480px) {
+
+  .Q {
+    left: 10%;
+  }
+
+  .W {
+    left: 20%;
+  }
+
+  .O {
+    right: 20%;
+  }
+
+  .P {
+    right: 10%;
+  }
+}
