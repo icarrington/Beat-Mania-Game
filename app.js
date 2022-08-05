@@ -25,6 +25,8 @@ function game() {
 function start(speed) {
   if (!isStarted) {
     isStarted = true;
+    score = 0;
+    scoreDisplay.innerHTML = `Score: ${score}`;
     startButton.innerHTML = 'Stop Game';
     interval = setInterval(game, 750);
   }
@@ -45,8 +47,12 @@ function handleKeyUp(event) {
     const keyCoords= key.getBoundingClientRect();
 
     if ((keyCoords.top + 50 < barCoords.bottom) && (keyCoords.top + 50 > barCoords.top)) {
+
       if(key.classList.contains(keyPressed)) {
         key.classList.add('success');
+        setTimeout(() => {
+          key.remove();
+        }, 150)
         score++;
         scoreDisplay.innerHTML = `Score: ${score}`;
       } else {
