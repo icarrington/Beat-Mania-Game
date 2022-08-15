@@ -46,7 +46,7 @@ function handleKeyUp(event) {
   allKeys.forEach(key => {
     const keyCoords= key.getBoundingClientRect();
 
-    if ((keyCoords.top + 50 < barCoords.bottom) && (keyCoords.top + 50 > barCoords.top)) {
+    if ((keyCoords.top + 75 < barCoords.bottom) && (keyCoords.top + 75 > barCoords.top)) {
 
       if(key.classList.contains(keyPressed)) {
         key.classList.add('success');
