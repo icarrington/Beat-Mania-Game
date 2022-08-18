@@ -61,6 +61,8 @@ function handleKeyUp(event) {
       } else {
         key.classList.add('fail');
       }
+    } else if (keyCoords.top < barCoords.bottom + 100) { //if the key is just below the green window but not inside it counts as a failure.
+      key.classList.add('fail');
     }
   })
 }
